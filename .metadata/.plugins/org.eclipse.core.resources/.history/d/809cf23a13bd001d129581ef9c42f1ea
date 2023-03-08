@@ -1,0 +1,37 @@
+package stopWatch;
+
+import java.awt.event.*;
+import javax.swing.*;
+
+public class Stopwatch implements ActionListener {
+    JFrame frame = new JFrame();
+    JButton startButton = new JButton("Start");
+    JButton stopButton = new JButton("Stop");
+    JLabel timeLabel = new JLabel();
+
+    int elapsedtime = 0;
+    int seconds = 0;
+    int minutes = 0;
+    int hour = 0;
+    boolean started = false;
+    String seconds_string = String.format("%02d", seconds);
+    Stopwatch(){
+
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        // TODO Auto-generated method stub
+
+    }
+    void start() {
+
+    }
+    void stopwatch() {
+
+    }
+    void reset() {
+
+    }
+
+}
+
