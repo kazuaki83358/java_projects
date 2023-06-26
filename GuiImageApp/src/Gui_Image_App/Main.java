@@ -21,7 +21,7 @@ public class Main extends JFrame {
     public Main() {
         frame = new JFrame("Gallery_Dummy");
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        frame.setSize(500, 500);
+        frame.setSize(450, 700);
 
         JPanel panel = new JPanel();
         panel.setBackground(Color.white);
@@ -41,7 +41,7 @@ public class Main extends JFrame {
         displayImage();
 
         Button nextButton = new Button("Next");
-        nextButton.setBounds(347, 400, 80, 30);
+        nextButton.setBounds(316, 579, 80, 30);
         nextButton.addActionListener(new ActionListener() {
 
             @Override
@@ -55,7 +55,7 @@ public class Main extends JFrame {
         });
 
         Button prevButton = new Button("Previous");
-        prevButton.setBounds(65, 400, 80, 30);
+        prevButton.setBounds(61, 579, 80, 30);
         prevButton.addActionListener(new ActionListener() {
 
             @Override
@@ -77,9 +77,9 @@ public class Main extends JFrame {
     private void displayImage() {
         String imagePath = "images/image" + (currentImageIndex + 1) + ".jpeg";
         ImageIcon imageIcon = new ImageIcon(imagePath);
-        Image image = imageIcon.getImage().getScaledInstance(400, 300, Image.SCALE_SMOOTH);
+        Image image = imageIcon.getImage().getScaledInstance(400, 700, Image.SCALE_SMOOTH);
         imageLabel.setIcon(new ImageIcon(image));
-        imageLabel.setBounds(50, 50, 400, 300);
+        imageLabel.setBounds(10, 10, 518, 500);
         frame.getContentPane().add(imageLabel);
         frame.repaint();
     }

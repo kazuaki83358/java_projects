@@ -22,20 +22,33 @@ public class App
 				String name = br.readLine();
 				System.out.println("Enter phone number");
 				String phone = br.readLine();
-				System.out.println("ENter city");
+				System.out.println("Enter city");
 				String city = br.readLine();
 				
 				//create student object for store details
 				student st = new student(name,phone,city);
+				boolean asnwer = StudentDao.insertStudentToDB(st);
+				if (asnwer) {
+					System.out.println("Student Is Added Sucessfully");
+				}else {
+					System.out.println("Something Went Wrong Try Again");
+				}
 				System.out.println(st);
 			}
 			else if(c==2) {
 				//delete student
-				
+				System.out.println("Enter student id to delete");
+				int userId = Integer.parseInt(br.readLine());
+				boolean f = StudentDao.deletStudent(userId);
+				if (f) {
+					System.out.println("Deleted.........");
+				}else {
+					System.out.println("something went wrong........");
+				}
 			}
 			else if(c==3) {
 				//display student
-				
+				StudentDao.displayStudents();
 			}
 			else if(c==4) {
 				//exit
